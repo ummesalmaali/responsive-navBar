@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+header{
+    background: #2980b9;
+    padding: 20px 0;
+}
+nav.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+.logo a{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+}
+.main-menu ul{
+    list-style: none;
+    text-align: right;
+}
+.main-menu ul li {
+    display: inline-block;
+}
+.main-menu ul li:not(:last-of-type){
+    margin-right: 30px;
+}
+.main-menu ul li a{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 17px;
+    transition: all .3s ease;
+   display: inline-block;
+}
+.main-menu ul li a:hover{
+    color: #2ecc71;
+}
+.menu-toggle-btn{
+    cursor: pointer;
+    display: none;
+}
+.menu-toggle-btn div{
+    width: 40px;
+    height: 3px;
+    margin: 7px;
+    background: #ffffff;
+}
+
+@media (max-width: 767px){
+    .main-menu{
+        position: absolute;
+        top: 12%;
+        left: 0;
+        width: 100%;
+        background: #2ecc71;
+        padding: 30px;
+        display: none;
+    }
+    .main-menu ul{
+        text-align: center;
+    }
+    .main-menu ul li {
+        display: block;
+    }
+    .main-menu ul li:not(:last-child){
+        margin: 12px 0;
+    }
+    .main-menu ul li a:hover{
+        color: #bcec0f;
+    }
+    .menu-toggle-btn{
+        display: block;
+    }
+}
